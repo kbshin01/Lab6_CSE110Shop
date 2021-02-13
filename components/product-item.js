@@ -37,19 +37,19 @@ class ProductItem extends HTMLElement {
       buttonElement.innerText = "Add to Cart";
     } else {
       buttonElement.innerText = "Remove from Cart";
-      cartCount.innerText = parseInt(cartCount.innerText)++;
+      cartCount.innerText = ++cartCount.innerText;
     }
     buttonElement.addEventListener("click", function() {
       if (buttonElement.innerText == 'Add to Cart') {     
         alert('Added to Cart!');
         localStorage.setItem(this.getAttribute('id'), 'id');
         buttonElement.innerText = "Remove from Cart";
-        cartCount.innerText = parseInt(cartCount.innerText)++;
+        cartCount.innerText = ++cartCount.innerText;
       } else {
         alert('Removed from Cart!');
         localStorage.removeItem(this.getAttribute('id'));
         buttonElement.innerText = "Add to Cart";
-        cartCount.innerText = parseInt(cartCount.innerText)--;
+        cartCount.innerText = --cartCount.innerText;
       }
     });
     
