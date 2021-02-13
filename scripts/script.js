@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch('https://fakestoreapi.com/products')
       .then(response => response.json())
       .then(data => {
-        window.localStorage.setItem('products', JSON.stringify(data));
+        localStorage.setItem('products', JSON.stringify(data));
       });
   }
   
