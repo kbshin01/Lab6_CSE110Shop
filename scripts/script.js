@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   }
   
-  let products = JSON.parse(window.localStorage.getItem('products'));
+  let products = JSON.parse(localStorage.getItem('products'));
   for (let i = 0; i < products.length; i++) {
     let productItem = document.createElement('product-item');
     productItem.setAttribute('id', products[i].getAttribute('id'));
