@@ -5,11 +5,11 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch('https://fakestoreapi.com/products')
       .then(response => response.json())
       .then(data => {
-        localStorage.setItem('products', JSON.stringify(data));
+        window.localStorage.setItem('products', JSON.stringify(data));
       });
   }
   
-  let products = JSON.parse(localStorage.getItem('products'));
+  let products = JSON.parse(window.localStorage.getItem('products'));
   for (let i = 0; i < products.length; i++) {
     let productItem = document.createElement('product-item');
     productItem.setAttribute('id', products[i].getAttribute('id'));
