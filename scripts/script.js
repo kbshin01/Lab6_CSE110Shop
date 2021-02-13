@@ -12,10 +12,10 @@ window.addEventListener('DOMContentLoaded', () => {
   let products = JSON.parse(localStorage.getItem('products'));
   for (let i = 0; i < products.length; i++) {
     let productItem = document.createElement('product-item');
-    productItem.setAttribute('id', products[i].getAttribute('id'));
-    productItem.setAttribute('image', products[i].getAttribute('image'));
-    productItem.setAttribute('title', products[i].getAttribute('title'));
-    productItem.setAttribute('price', products[i].getAttribute('price'));
+    productItem.setAttribute('id', products[i].id);
+    productItem.setAttribute('image', products[i].image);
+    productItem.setAttribute('title', products[i].title);
+    productItem.setAttribute('price', products[i].price);
     document.getElementById('product-list').appendChild(productItem);
   }
 });
