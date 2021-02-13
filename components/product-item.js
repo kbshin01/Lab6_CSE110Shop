@@ -120,6 +120,12 @@ class ProductItem extends HTMLElement {
     }`;
     
     this.shadowRoot.append(style, wrapper);
+    let overallStyle = document.createElement('link');
+    overallStyle.setAttribute('rel', 'stylesheet');
+    overallStyle.setAttribute('href', '../styles/styles.css');
+    this.shadowRoot.appendChild(overallStyle);
+    this.shadowRoot.appendChild(style);
+    this.shadowRoot.appendChild(wrapper);
   }
 }
 
