@@ -9,13 +9,12 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   }
   
-  let products = JSON.parse(localStorage.getItem('products'));
-  for (let i = 0; i < products.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     let productItem = document.createElement('product-item');
-    productItem.setAttribute('id', products[i].getAttribute('id'));
-    productItem.setAttribute('image', products[i].getAttribute('image'));
-    productItem.setAttribute('title', products[i].getAttribute('title'));
-    productItem.setAttribute('price', products[i].getAttribute('price'));
+    productItem.setAttribute('id', data[i].getAttribute('id'));
+    productItem.setAttribute('image', data[i].getAttribute('image'));
+    productItem.setAttribute('title', data[i].getAttribute('title'));
+    productItem.setAttribute('price', data[i].getAttribute('price'));
     (document.getElementById('product-list')).appendChild(productItem);
   }
 });
