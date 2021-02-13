@@ -7,7 +7,9 @@ class ProductItem extends HTMLElement {
 
     // Create a shadow root
     this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
-    
+  }
+  
+  connectedCallback() {
     // Element functionality written in here
     const wrapper = document.createElement('li');
     
