@@ -7,9 +7,7 @@ class ProductItem extends HTMLElement {
 
     // Create a shadow root
     this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
-  }
   
-  connectedCallback() {
     // Element functionality written in here
     const wrapper = document.createElement('li');
     
@@ -120,12 +118,10 @@ class ProductItem extends HTMLElement {
       text-overflow: unset;
     }`;
     
-    this.shadowRoot.append(style, wrapper);
     let overallStyle = document.createElement('link');
     overallStyle.setAttribute('rel', 'stylesheet');
     overallStyle.setAttribute('href', '../styles/styles.css');
     this.shadowRoot.appendChild(overallStyle);
-    this.shadowRoot.appendChild(style);
     this.shadowRoot.appendChild(wrapper);
   }
 }
