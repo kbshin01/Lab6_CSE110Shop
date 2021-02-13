@@ -1,13 +1,13 @@
 // Script.js
 
 window.addEventListener('DOMContentLoaded', () => {
-  //if (localStorage.getItem('products') == null) {
+  if (localStorage.getItem('products') == null) {
     fetch('https://fakestoreapi.com/products')
       .then(response => response.json())
       .then(data => {
         localStorage.setItem('products', JSON.stringify(data));
       });
-  //}
+  }
   
   for (let i = 0; i < data.length; i++) {
     let productItem = document.createElement('product-item');
