@@ -9,25 +9,25 @@ class ProductItem extends HTMLElement {
     this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
     
     // Element functionality written in here
-    let wrapper = document.createElement('li');
+    const wrapper = document.createElement('li');
     
-    let imgElement = document.createElement('img');
+    const imgElement = document.createElement('img');
     imgElement.setAttribute('src', this.getAttribute('image'));
     imgElement.setAttribute('alt', this.getAttribute('title'));
     imgElement.setAttribute('width', 200);
     wrapper.appendChild(imgElement);
     
-    let titleElement = document.createElement('p');
+    const titleElement = document.createElement('p');
     titleElement.setAttribute('class', 'title');
     titleElement.innerText = this.getAttribute('title');
     wrapper.appendChild(titleElement);
 
-    let priceElement = document.createElement('p');
+    const priceElement = document.createElement('p');
     priceElement.setAttribute('class', 'price');
     priceElement.innerText = this.getAttribute('price');
     wrapper.appendChild(priceElement);
     
-    let buttonElement = document.createElement('button');
+    const buttonElement = document.createElement('button');
     buttonElement.setAttribute('onclick', alert('Added to Cart!'));
     buttonElement.innerText = "Add to Cart";
     wrapper.appendChild(buttonElement);
