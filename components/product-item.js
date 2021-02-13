@@ -28,7 +28,6 @@ class ProductItem extends HTMLElement {
     wrapper.appendChild(priceElement);
     
     const buttonElement = document.createElement('button');
-    buttonElement.setAttribute('onclick', alert('Added to Cart!'));
     buttonElement.innerText = "Add to Cart";
     wrapper.appendChild(buttonElement);
     
